@@ -1,0 +1,76 @@
+{
+    "pages": [
+        "pages/index/index/index",
+        "pages/my/index/index",
+        "pages/shop/index/index",
+        "pages/index/city/city",
+        "pages/classify/index/index",
+        "pages/index/shoppDetail/index",
+        "pages/index/moreComment/index",
+        "pages/index/addCarType/addCarType",
+        "pages/index/displacement/displacement",
+        "pages/index/proYear/proYear",
+        "pages/index/carType/carType",
+        "pages/shop/shopDetail/shopDetail",
+        "pages/index/search/index",
+        "pages/shop/shopCommodity/shopCommodity",
+        "pages/shopping/shoppOrder/shoppOrder",
+        "pages/shopping/index/index",
+        "pages/shopping/delivery/delivery",
+        "pages/shopping/newAddress/newAddress",
+        "pages/my/orderList/orderList",
+        "pages/my/evaluate/evaluate",
+        "pages/shopping/payment/payment",
+        "pages/my/logistics/logistics",
+        "pages/my/serviceLog/serviceLog"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "tabBar": {
+        "color": "#8E8E93",
+        "selectedColor": "#8E8E93",
+        "list": [
+            {
+                "pagePath": "pages/index/index/index",
+                "iconPath": "/img/index.png",
+                "selectedIconPath": "/img/indexone.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/classify/index/index",
+                "iconPath": "/img/classify.png",
+                "selectedIconPath": "/img/classifyone.png",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/shop/index/index",
+                "iconPath": "/img/shop.png",
+                "selectedIconPath": "/img/shopoone.png",
+                "text": "门店"
+            },
+            {
+                "pagePath": "pages/shopping/index/index",
+                "iconPath": "/img/shopping.png",
+                "selectedIconPath": "/img/shoppingone.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/my/index/index",
+                "iconPath": "/img/my.png",
+                "selectedIconPath": "/img/myone.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

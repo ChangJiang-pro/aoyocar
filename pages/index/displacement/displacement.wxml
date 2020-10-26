@@ -1,0 +1,32 @@
+<view>
+     <!-- 自定义导航栏 start -->
+	<view class="nav-bar" style="height:{{navBarHeight}}px;">
+		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px;  bottom:{{menuBotton}}px;" bindtap="backHome">
+			<view class="backBu">
+				<view class="back-content">
+					<view style="width:40%" bindtap="backAddCarType">
+						<van-icon name="arrow-left" />
+					</view>
+					<view style="width:20%">
+						<image src="../../../img/line.png"></image>
+					</view>
+					<view style="width:40%" bindtap="backHome">
+						<van-icon name="home-o" />
+					</view>
+				</view>
+				<text>请选择发动机排量</text>
+				<view style="width:120rpx"></view>
+			</view>
+		</view>
+	</view>
+	<!-- 自定义导航栏 end -->
+	<view class="content" style="margin-top:{{navBarHeight}}px">
+		<view class="carType">
+			<image src="../../../img/add.png"></image>上海大众-新桑坦  三厢版
+		</view>
+		<view class="select">请选择发动机排量</view>
+		<view class="options">
+			<view class="items" wx:for="{{items}}" wx:key="key" bindtap="goYear">{{item}}</view>
+		</view>
+	</view>
+</view>

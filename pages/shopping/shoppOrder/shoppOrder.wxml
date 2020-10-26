@@ -1,0 +1,108 @@
+<view>
+	<!-- 自定义导航栏 start -->
+	<view class="nav-bar" style="height:{{navBarHeight}}px;">
+		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px;  bottom:{{menuBotton}}px;" bindtap="backHome">
+			<view class="backBu">
+				<view class="back-content">
+					<view style="width:40%" bindtap="backHome">
+						<van-icon name="arrow-left" />
+					</view>
+					<view style="width:20%">
+						<image src="../../../img/line.png"></image>
+					</view>
+					<view style="width:40%" bindtap="backHome">
+						<van-icon name="home-o" />
+					</view>
+				</view>
+				<text>提交订单</text>
+				<view style="width:120rpx"></view>
+			</view>
+		</view>
+	</view>
+	<!-- 自定义导航栏 end -->
+	<!-- 内容 start -->
+	<view class="content" style="margin-top:{{navBarHeight}}px">
+		<view class="consignee">
+			<view class="default">
+				<text>默认</text>
+				<text>家</text>
+			</view>
+			<view class="detailName">
+				<view class="detail_con">
+					<view class="detail_con_T">
+						<view class="t_img">
+							<image src="../../../img/di.png"></image>
+						</view>
+						<view class="t_content">
+							<view>广东 广州 越秀区</view>
+							<view>东风中路250号 1109-1110</view>
+						</view>
+					</view>
+					<view class="detail_con_B">
+						<view class="t_img">
+							<image src="../../../img/xinxi.png"></image>
+						</view>
+						<view class="t_content">
+							<view>王小明</view>
+							<view>15012412012</view>
+						</view>
+					</view>
+				</view>
+				<view class="selectDetail" bindtap="goShouHuo">
+					<image src="../../../img/R.png"></image>
+				</view>
+			</view>
+		</view>
+		<!-- 商品 -->
+		<view class="shopp">
+			<view class="shoppName">
+				<image src="../../../img/dianpu.png"></image><text>扳手维修蔡瀛州店</text>
+			</view>
+			<view class="shoppDetail">
+				<view class="detail_i">
+					<image src="../../../img/carL.png"></image>
+				</view>
+				<view class="detail_c">
+					<view>米其林轮胎Michelin汽车轮胎2055R16 91W</view>
+					<view>
+						<text>19款 13.3寸 普通款 共1件</text>
+					</view>
+					<view class="money">
+						<text>￥250.00</text>
+						<text>x1</text>
+					</view>
+				</view>
+			</view>
+		</view>
+        <!-- 发票 -->
+        <view class="invoice">
+            <view class="invoice_con">
+                <view class="title">发票</view>
+                <view class="content">
+                 <text style="color:#DB0101">电子</text>(商品明细-个人)<image src="../../../img/sandian.png"></image></view>
+            </view>
+            <view class="discount_con">
+                 <view class="title">优惠券</view>
+                 <view class="content">
+                    无可用<image src="../../../img/sandian.png"></image>
+                 </view>
+            </view>
+        </view>
+        <!-- 价钱 -->
+        <view class="price">
+            <view class="invoice_con">
+                <view class="title">商品金额</view>
+                <view class="content">￥250.00</view>
+            </view>
+            <view class="discount_con">
+                 <view class="title">运费</view>
+                 <view class="content" style="color:#DB0101"> + ￥0.00</view>
+            </view>
+        </view>
+	</view>
+    <view class="footer">
+        <view><text style="font-size:20rpx;">￥</text>250.00</view>
+        <view bindtap="goSuccess">提交订单</view>
+    </view>
+	<!-- 内容 end -->
+</view>

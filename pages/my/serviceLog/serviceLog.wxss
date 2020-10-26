@@ -1,0 +1,80 @@
+@import "../../../commpents/navbar.wxss";
+page{
+    background-color: #f6f6f6;
+}
+.header{
+    width: 100%;
+    height: 180rpx;
+    background-color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+    margin-bottom: 10rpx;
+}
+.header_con{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+}
+.header_con .propleimg{
+    width: 20%;
+    height: 100%;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.header_con .propleimg image{
+    width: 100%;
+    height: 100%;
+}
+.con_detail{
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.con_detail .content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 40rpx 10rpx;
+    display: flex;
+}
+.con_left{
+    width: 25%;
+    height: 100%;
+    font-size: 26rpx;
+    color: #333333;
+}
+.con_left .items{
+    width: 100%;
+    height: 200rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+.con_middle{
+    width: 5%;
+    height: 100%;
+}
+.con_right{
+    width: 70%;
+    height: 100%;
+    font-size: 26rpx;
+    color: #000;
+}
+.con_middle image{
+    width: 20rpx;
+    height: 20rpx;
+}
+.con_right .items,.con_middle .items{
+    width: 100%;
+    height: 200rpx;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+}
+.con_middle .items view{
+    width: 3rpx;
+    height: 150rpx;
+    background-color: #DCDCDC;
+    margin-left: 10rpx;
+}

@@ -1,0 +1,89 @@
+<view>
+	<!-- 自定义导航栏 start -->
+	<view class="nav-bar" style="height:{{navBarHeight}}px;">
+		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px;  bottom:{{menuBotton}}px;" bindtap="backHome">
+			<view class="backBu">
+				<view class="back-content">
+					<view style="width:40%" bindtap="backfirst">
+						<van-icon name="arrow-left" />
+					</view>
+					<view style="width:20%">
+						<image src="../../../img/line.png"></image>
+					</view>
+					<view style="width:40%" bindtap="backfirst">
+						<van-icon name="home-o" />
+					</view>
+				</view>
+				<text>请选择品牌</text>
+				<view style="width:120rpx"></view>
+			</view>
+		</view>
+	</view>
+	<!-- 自定义导航栏 end -->
+	<view style="margin-top:{{navBarHeight}}px">
+		<view class="search" style="top:{{navBarHeight}}px">
+			<view class="content">
+				<image src="../../../img/suo.png"></image>
+				<input placeholder="请输入汽车品牌关键字"></input>
+			</view>
+		</view>
+		<view class="list">
+			<view class="hotBrand">
+				<view class="header">热门品牌</view>
+				<view class="content">
+					<view class="items" wx:for="{{5}}" wx:key="key">
+						<image src="../../../img/luntai.png"></image>
+						<view>车名</view>
+					</view>
+				</view>
+			</view>
+			<view class="carList">
+				<view class="content">
+					<view class="all-city">
+						<scroll-view class="city-scroll" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{toView}}">
+							<view class="city-list">
+								<!-- 循环车列表 start -->
+								<view wx:for="{{cityList}}" wx:key="key" id="{{'city'+index}}" data-title="{{item.title}}">
+									<view class="nav-text">
+										<text>{{item.title}}</text>
+									</view>
+									<view class="show-city" wx:for="{{item.lists}}" wx:key="key" data-title="{{item}}" bindtap='selectcity'>
+										<image src="../../../img/add.png" style="width:30rpx;height:30rpx"></image>
+										<text>{{item}}</text>
+									</view>
+								</view>
+								<!-- 循环车列表 end -->
+							</view>
+						</scroll-view>
+					</view>
+					<!-- 字母索引 start -->
+					<view class="search-nav" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="top:150px">
+						<text bindtap="cityScroll" data-index="{{index}}" wx:for="{{searchNav}}" wx:key="key">{{item}}</text>
+					</view>
+					<!-- 字母索引 end -->
+				</view>
+				<!-- 弹出层 -->
+				<view class="popup">
+					<scroll-view scroll-y="true">
+						<van-popup show="{{ show }}" bind:close="onClose" position="right" custom-style="height:100%;width:70%;padding:35% 0% 10% 0%" close-on-click-overlay="true">
+							<!-- 内容 start -->
+							<view class="proup_content">
+								<view class="title">
+									<image src="../../../img/luntai.png"></image> 大众
+								</view>
+								<view class="select" wx:for="{{3}}" wx:key="key">
+									<view class="select_header">上海大众</view>
+									<view class="select_con" bindtap="goDispla">
+										<view class="items" wx:for="{{5}}" wx:key="key">POLO</view>
+									</view>
+								</view>
+							</view>
+							<!-- 内容 end -->
+						</van-popup>
+					</scroll-view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+</view>

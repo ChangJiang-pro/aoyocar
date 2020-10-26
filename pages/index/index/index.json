@@ -1,0 +1,8 @@
+{ 
+  "usingComponents": {
+    "van-rate": "../../../dist/rate/index",
+    "van-search": "../../../dist/search/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

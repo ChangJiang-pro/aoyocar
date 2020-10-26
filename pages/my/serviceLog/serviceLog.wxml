@@ -1,0 +1,64 @@
+<view>
+	<!-- 自定义导航栏 start -->
+	<view class="nav-bar" style="height:{{navBarHeight}}px;">
+		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px;  bottom:{{menuBotton}}px;" bindtap="backHome">
+			<view class="backBu">
+				<view class="back-content">
+					<view style="width:40%" bindtap="backorderList">
+						<van-icon name="arrow-left" />
+					</view>
+					<view style="width:20%">
+						<image src="../../../img/line.png"></image>
+					</view>
+					<view style="width:40%" bindtap="backHome">
+						<van-icon name="home-o" />
+					</view>
+				</view>
+				<text>服务记录</text>
+				<view style="width:120rpx"></view>
+			</view>
+		</view>
+	</view>
+	<!-- 自定义导航栏 end -->
+	<view class="content" style="margin-top:{{navBarHeight}}px">
+		<view class="header">
+			<view class="header_con">
+				<view class="propleimg">
+					<image src="../../../img/15.png"></image>
+				</view>
+				<view class="name">宝兑通维修店—李大力</view>
+			</view>
+		</view>
+		<view class="con_detail">
+			<view class="content">
+				<view class="con_left">
+					<view class="items" wx:for="{{list}}" wx:key="key">
+						<view>{{item.time}}</view>
+						<view>{{item.hous}}</view>
+					</view>
+				</view>
+				<view class="con_middle">
+					<view class="items" wx:for="{{list}}" wx:key="key">
+						<image wx:if="{{item.status==1}}" src="../../../img/checked.png"></image>
+						<image wx:if="{{item.status==0}}" src="../../../img/statR.png"></image>
+						<view wx:if="{{list.length-1!=index}}"></view>
+					</view>
+					<!-- <view class="items">
+						<image src="../../../img/statR.png"></image>
+						<view></view>
+					</view>
+					<view class="items">
+						<image src="../../../img/statR.png"></image>
+						<view></view>
+					</view>
+					<view class="items">
+						<image src="../../../img/statR.png"></image>
+					</view> -->
+				</view>
+				<view class="con_right">
+					<view class="items" wx:for="{{list}}" wx:key="key">{{item.text}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

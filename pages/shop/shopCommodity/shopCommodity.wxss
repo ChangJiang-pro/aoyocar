@@ -1,0 +1,240 @@
+page {
+    background-color: #F6F6F6;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background: #000000;
+    color: #ffffff;
+}
+
+
+.nav-bar .back {
+    width: 100%;
+    position: absolute;
+}
+
+.backBu view {
+    margin-left: 15rpx;
+}
+
+.backBu input {
+    width: 300rpx;
+    border-radius: 20rpx;
+    padding-left: 60rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-size: 20rpx;
+}
+
+.backBu .site {
+    width: 100rpx;
+}
+
+.backBu .search {
+    width: 20rpx;
+    height: 20rpx;
+    position: absolute;
+    left: 28%;
+}
+
+.backBu .site image {
+    width: 15rpx;
+    height: 10rpx;
+    margin-left: 10rpx;
+}
+
+.nav-bar .back view {
+    display: flex;
+    align-items: center;
+}
+
+/* 内容 */
+.content {
+    width: 100%;
+}
+
+.shop {
+    width: 100%;
+    padding: 20rpx 20rpx 20rpx 30rpx;
+    height: 130rpx;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.shop .shopImg {
+    width: 15%;
+    height: 100%;
+    border: 2px solid #ffffff;
+    border-radius: 10rpx;
+}
+
+.shop .shopImg image {
+    width: 100%;
+    height: 100%;
+}
+
+.shop .shopName {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30rpx;
+}
+
+.shop .shopName image {
+    width: 130rpx;
+    height: 50rpx;
+    margin-top: 10rpx;
+}
+
+/* list */
+.shoppList {
+    width: 100%;
+    height: 500rpx;
+    background-color: #f6f6f6;
+}
+
+.filtrate {
+    width: 100%;
+    height: 100rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 30rpx;
+}
+
+.filtrate .filtrate-L {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtrate .filtrate-L view {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+}
+
+.filtrate .filtrate-R {
+    width: 30%;
+    height: 100%;
+    border-left: 1px solid rgba(220, 220, 220, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26rpx;
+}
+
+.filtrate .filtrate-R image {
+    width: 20rpx;
+    height: 20rpx;
+    margin-left: 20rpx;
+}
+
+.filtrate-L .nav_left_items.active {
+    position: relative;
+}
+
+.filtrate-L .nav_left_items.active::before {
+    display: inline-block;
+    width: 60rpx;
+    height: 6rpx;
+    background: linear-gradient(90deg, rgba(165, 9, 32, 1) 0%, rgba(240, 77, 91, 1) 100%);
+    content: '';
+    position: absolute;
+    top: 60rpx;
+}
+
+.list {
+    width: 100%;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.list-content {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30rpx;
+}
+
+.list-content .items {
+    width: 49%;
+    height: 500rpx;
+    background-color: #fff;
+    margin-top: 15rpx;
+}
+.list-content .items view{
+    margin-bottom: 5rpx;
+}
+.list-content .items .items_img {
+    width: 100%;
+    height: 350rpx;
+}
+
+.list-content .items .items_img image {
+    width: 100%;
+    height: 100%;
+}
+
+.list-content .items .items_con {
+    width: 100%;
+    height: 150rpx;
+    padding: 15rpx;
+    box-sizing: border-box;
+}
+
+.con_name {
+    width: 100%;
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 26rpx;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 700;
+}
+.con_money{
+    color: #B50808;
+    font-size: 26rpx;
+}
+.con_star{
+    font-size: 24rpx;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rpx;
+}
+.con_star image{
+    width:25rpx;
+    height: 25rpx;
+}
+.con_star view:nth-child(2){
+    width: 40rpx;
+    height: 40rpx;
+    background-color: rgba(255,245,243,1);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con_star view:nth-child(2) image{
+    width: 70%;
+    height: 70%;
+}

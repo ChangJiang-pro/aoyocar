@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-stepper": "../../../dist/stepper/index",
+    "van-swipe-cell": "../../../dist/swipe-cell/index"
+  },
+  "navigationBarTitleText": "购物车"
+}

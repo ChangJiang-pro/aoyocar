@@ -1,0 +1,270 @@
+@import "../../../commpents/navbar.wxss";
+page {
+    background-color: #f6f6f6;
+}
+/* content */
+.consignee {
+    width: 100%;
+    background-color: #ffff;
+    padding: 30rpx 20rpx 10rpx 20rpx;
+    box-sizing: border-box;
+    margin-bottom: 20rpx;
+}
+
+.default {
+    width: 100%;
+    height: 50rpx;
+}
+
+.default text:nth-child(1) {
+    display: inline-block;
+    padding: 5rpx 8rpx;
+    background: rgba(190, 190, 190, 1);
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 20rpx;
+}
+
+.default text:nth-child(2) {
+    display: inline-block;
+    padding: 5rpx 16rpx;
+    background: linear-gradient(90deg, rgba(255, 135, 99, 1) 0%, rgba(255, 89, 67, 1) 100%);
+    border-radius: 10rpx;
+    color: #fff;
+    font-size: 20rpx;
+    margin-left: 15rpx;
+}
+
+.detailName {
+    width: 100%;
+    height: 200rpx;
+    margin-top: 10rpx;
+    display: flex;
+    align-items: center;
+}
+
+.detail_con {
+    width: 90%;
+    height: 100%;
+}
+
+.selectDetail {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t_img {
+    width: 10%;
+    height: 100%;
+    display: flex;
+}
+
+.selectDetail image {
+    width: 15rpx;
+    height: 25rpx;
+}
+
+.detail_con_T,
+.detail_con_B {
+    height: 50%;
+    display: flex;
+}
+
+.detail_con_T image {
+    width: 25rpx;
+    height: 30rpx;
+    margin-left: 10rpx;
+    margin-top: 10rpx;
+}
+
+.detail_con_B image {
+    width: 40rpx;
+    height: 30rpx;
+    margin-top: 10rpx;
+}
+
+.t_content {
+    width: 90%;
+    height: 100%;
+}
+
+.t_content view:nth-child(1) {
+    font-size: 28rpx;
+    color: #000;
+    margin-bottom: 8rpx;
+    font-weight: 500;
+}
+
+.t_content view:nth-child(2) {
+    font-size: 24rpx;
+    color: #333333;
+}
+
+/* shopp */
+.shopp {
+    width: 100%;
+    background-color: #fff;
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+
+.shoppName {
+    width: 100%;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 24rpx;
+}
+
+.shoppName image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 15rpx;
+}
+
+.shoppDetail {
+    width: 100%;
+    height: 170rpx;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shoppDetail .detail_i {
+    width: 22%;
+    height: 100%;
+}
+
+.shoppDetail .detail_i image {
+    width: 100%;
+    height: 100%;
+}
+
+.shoppDetail .detail_c {
+    width: 75%;
+    height: 100%;
+}
+
+.shoppDetail .detail_c view {
+    margin-bottom: 15rpx;
+}
+
+.shoppDetail .detail_c view:nth-child(1) {
+    font-size: 28rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.shoppDetail .detail_c view:nth-child(2) {
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.shoppDetail .detail_c .money {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.shoppDetail .detail_c .money text:nth-child(1) {
+    font-size: 26rpx;
+    color: #DB0202;
+}
+
+.shoppDetail .detail_c .money text:nth-child(2) {
+    font-size: 26rpx;
+}
+
+/* 发票 */
+.invoice,
+.price {
+    width: 100%;
+    height: 200rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+
+.invoice .invoice_con,
+.invoice .discount_con,
+.price .invoice_con,
+.price .discount_con {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+.invoice .invoice_con .title,
+.invoice .discount_con .title,
+.price .invoice_con .title,
+.price .discount_con .title {
+    width: 27%;
+    height: 100%;
+    font-size: 28rpx;
+    align-items: center;
+    display: flex;
+}
+
+.invoice .invoice_con .content,
+.invoice .discount_con .content,
+.price .invoice_con .content,
+.price .discount_con .content {
+    width: 70%;
+    height: 100%;
+    font-size: 28rpx;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.invoice .invoice_con .content image,
+.invoice .discount_con .content image {
+    width: 25rpx;
+    margin-top: 5rpx;
+    height: 7rpx;
+    margin-left: 10rpx;
+}
+
+.footer {
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0px -30rpx 40rpx 0px rgba(33, 27, 27, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 20rpx 40rpx 20rpx 20rpx;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.footer view:nth-child(1) {
+    color: #DB0101;
+    font-size: 34rpx;
+}
+
+.footer view:nth-child(2) {
+    width: 200rpx;
+    height: 80rpx;
+    background: linear-gradient(90deg, rgba(255, 139, 101, 1) 0%, rgba(255, 89, 67, 1) 100%);
+    border-radius: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28rpx;
+}
