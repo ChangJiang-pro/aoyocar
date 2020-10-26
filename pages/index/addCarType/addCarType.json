@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-icon": "../../../dist/icon/index",
-    "van-popup": "../../../dist/popup/index"
-  }
-}
