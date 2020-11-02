@@ -10,6 +10,7 @@
         "pages/index/addCarType/addCarType",
         "pages/index/displacement/displacement",
         "pages/index/proYear/proYear",
+        "pages/my/login/login",
         "pages/index/carType/carType",
         "pages/shop/shopDetail/shopDetail",
         "pages/index/search/index",

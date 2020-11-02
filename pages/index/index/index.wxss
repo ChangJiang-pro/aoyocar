@@ -1,0 +1,330 @@
+/* pages/index/index/index.wxss */page {
+  background-color: #FFFFFF;
+}
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: #FFFFFF;
+}
+
+.back-content {
+    width: 120rpx;
+    border: 1px solid rgb(226, 220, 220);
+    padding: 10rpx 0;
+    border-radius: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .back {
+    width: 100%;
+    position: absolute;
+}
+
+.nav-bar .back .backBu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10rpx 0 20rpx;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.nav-bar .back view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .back image {
+    width: 30rpx;
+    height: 30rpx;
+}
+.content .searchCity{
+  width: 100%;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .searchCity .citySelect{
+  width: 18%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+.content .searchCity .citySelect image {
+  width: 20rpx;
+  height: 10rpx;
+  margin-left: 10rpx;
+} 
+.content .searchCity .search{
+  width: 82%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.content .searchCity .search van-search{
+  width: 100%;
+}
+.content .carType {
+  width: 100%;
+  box-shadow: 0 6rpx 0 0 #F0F1F3;
+  padding: 0 20rpx 20rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .carType .carT {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+.content .carType .carT image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+}
+
+.content .carType .car-shopp {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #8a8a8a;
+}
+
+.content .carType .car-shopp image {
+  width: 120rpx;
+  height: 50rpx;
+}
+
+.swiperItem {
+  width: 100%;
+  height: 350rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.swiperItem swiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.swiperItem image {
+  width: 100%;
+  height: 350rpx;
+}
+
+.ServicesAvailable {
+  width: 100%;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.ServicesAvailable .item {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  font-size: 26rpx;
+}
+
+.ServicesAvailable .item image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+}
+
+.goGood {
+  width: 100%;
+  height: 220rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.goGood image {
+  width: 100%;
+  height: 100%;
+}
+
+.shopp {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.shopp .recommend {
+  width: 100%;
+  height: 70rpx;
+  padding: 5rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shopp .recommend image{
+  width: 260rpx;
+  height: 35rpx;
+}
+
+.nearbyShop .recommend {
+  width: 100%;
+  height: 70rpx;
+  padding-left: 30rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #ccc;
+  box-sizing: border-box;
+}
+
+.recommend .shoppLine,
+.nearbyShop .recommend .fujin {
+  display: inline-block;
+  width: 10rpx;
+  height: 50%;
+  border-radius: 20rpx;
+  background-color: #CF2F41;
+  margin-right: 20rpx;
+}
+
+.shopp .shoppList {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.shopp .shoppList .item {
+  width: 49%;
+  height: 500rpx;
+  margin-right: .5%;
+  margin-top: 10rpx;
+  border: 1px solid #ccc;
+  padding: 5rpx;
+  box-sizing: border-box;
+}
+
+.shopp .shoppList .item image {
+  width: 100%;
+  height: 65%;
+}
+
+.shopp .shoppList .item .shoppDescribe {
+  width: 100%;
+  margin-bottom: 10%;
+}
+
+.shopp .shoppList .item .shoppDescribe .descCon {
+  width: 100%;
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 24rpx;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.shopp .shoppList .item .shoppPrice {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.shopp .shoppList .item .shoppPrice .evaluate {
+  font-size: 22rpx;
+}
+
+/* 附近门店 */
+.nearbyShop {
+  width: 100%;
+  height: 520rpx;
+  background-color: #FFFFFF;
+}
+
+.nearbyShop .recommend {
+  width: 100%;
+  height: 70rpx;
+}
+
+.nearbyShop .recommend .mendian {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nearbyShop .recommend .more {
+  width: 48%;
+  height: 100%;
+  text-align: right;
+  line-height: 70rpx;
+}
+
+.scroll-view_H {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.scroll-view_H .item {
+  width: 90%;
+  height: 100%;
+  display: inline-block;
+  margin-right: 20rpx;
+  border: 1px solid #ccc;
+  background-color: #ffff;
+}
+
+.scroll-view_H .item image {
+  width: 100%;
+  height: 75%;
+  margin-bottom: 10rpx;
+}
+
+.scroll-view_H .item .distance {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  padding-left: 10rpx;
+  font-size: 24rpx;
+  align-items: center;
+}
+
+.scroll-view_H .item .distance .rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scroll-view_H .item .distance .rate van-rate {
+  width: 100rpx;
+
+}
+
+.scroll-view_H .item .shopName {
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+}
