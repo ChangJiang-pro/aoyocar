@@ -1,104 +1,24 @@
-<view class="contion">
-	<!-- 自定义导航栏 start -->
-	<view class="nav-bar" style="height:{{navBarHeight}}px;">
-		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px; bottom:{{menuBotton}}px;" bindtap="backHome">
-			<view class="backBu">
-				<view style="width:120rpx"></view>
-				<text>首页</text>
-				<view style="width:120rpx"></view>
+<view>
+  <swiper 
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" 
+    interval="{{interval}}" 
+    duration="{{duration}}" 
+    circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="customId">
+      <swiper-item>
+        <image class="img1" src="{{item.photo}}" mode="widthFix"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  		<!-- 轮播图 end-->
+		<!-- 活动 start -->
+		<view class="ServicesAvailable">
+			<view class="item" wx:for="{{Services}}" wx:key="key" data-id="{{item.featuredServicesId}}"
+				data-path="{{item.jumpPath}}" bindtap="getTypePage">
+				<image src="{{item.functionButtonUrl}}"></image>
+				<text>{{item.functionButtonName}}</text>
 			</view>
 		</view>
-	</view>
-	<!-- 自定义导航栏 end -->
-	<!-- 内容 start -->
-	<view class="content" style="margin-top:{{navBarHeight}}px">
-	<!-- <view class="content"> -->
-		<view class="searchCity">
-			<view class="citySelect" bindtap="goCity">
-				<text style="font-size:26rpx">{{city}}</text>
-				<image src="../../../img/sanjiao.png"></image>
-			</view>
-			<view class="search" bindtap="goSearchPage">
-				<van-search disabled shape="round" placeholder="搜索您要的商品或者门店" />
-			</view>
-		</view>
-		<view class="carType">
-			<view class="carT">
-				<image wx:if="{{carImg}}" src="{{carImg}}"></image>
-				<image wx:else src="../../../img/add.png"></image>
-				<text wx:if="{{car}}">{{car}}</text>
-				<text wx:else bindtap="goCarType">请添加您的车型 <text style="color:red">></text></text>
-			</view>
-			<view class="car-shopp">
-				<image src="../../../img/kefu.png" bindtap="callPhone"></image>
-			</view>
-		</view>
-		<!-- 轮播图 start-->
-		<view class="swiperItem">
-			<swiper autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" indicator-dots="{{true}}" circular indicator-active-color="#FFFFFF">
-				<swiper-item wx:for="{{swiperList}}" wx:key="key">
-					<image src="{{item}}" bindtap="preview" data-src="{{item}}"></image>
-				</swiper-item>
-			</swiper>
-		</view>
-		<!-- 轮播图 end-->
-		<view class="ServicesAvailable ">
-			<view class="item" wx:for="{{Services}}" wx:key="key">
-				<image src="{{item.img}}"></image>
-				<text>{{item.text}}</text>
-			</view>
-		</view>
-		<view class="goGood">
-			<image src="../../../img/haoli.png"></image>
-		</view>
-		<!-- 商品 start -->
-		<view class="shopp">
-			<view class="recommend">
-				<image src="../../../img/tuijian.png"></image>
-			</view>
-			<view class="shoppList">
-				<view class="item" wx:for="{{shoppList}}" wx:key="key" bindtap="itemDetail">
-					<image src="{{item.img}}"></image>
-					<view class="shoppDescribe">
-						<text class="descCon">{{item.desc}}</text>
-					</view>
-					<view class="shoppPrice">
-						<text style="color:red;">￥ {{item.price}}</text>
-						<text class="evaluate">评价{{item.evaluate}}条</text>
-					</view>
-				</view>
-			</view>
-		</view>
-		<!-- 商品 end -->
-		<!-- 附近门店 start -->
-		<view class="nearbyShop">
-			<view class="recommend">
-				<view class="mendian">
-					<view class="fujin"></view>附近门店
-				</view>
-				<view class="more">
-					<text>查看更多 ></text>
-				</view>
-			</view>
-			<scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll">
-				<view class="item" wx:for="{{shopList}}" wx:key="key">
-					<image src="{{item.img}}"></image>
-					<view class="shopName">
-						<text>{{item.name}}</text>
-					</view>
-					<view class="distance">
-						<view class="rate">
-							<text>评分：</text>
-							<van-rate readonly value="{{ item.value }}" />
-						</view>
-						<view>
-							距离：<text>{{item.distance}}</text>
-						</view>
-					</view>
-				</view>
-			</scroll-view>
-		</view>
-		<!-- 附近门店 end -->
-	</view>
-	<!-- 内容 end -->
 </view>

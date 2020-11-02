@@ -1,182 +1,98 @@
-const app = getApp();
+// pages/index/index/index.js
 Page({
 
-    /**
-     * 页面的初始数据
-     */
-    data: {
-        navBarHeight: app.globalData.navBarHeight,
-        menuRight: app.globalData.menuRight,
-        menuBotton: app.globalData.menuBotton,
-        menuHeight: app.globalData.menuHeight,
-        city: "北京市",
-        car: "",
-        carImg: "",
-        swiperList: ["../../../img/3.png", "../../../img/2.png", "../../../img/3.png"],
-        Services: [{
-            img: "../../../img/luntai.png",
-            text: "换轮胎"
-        },
-        {
-            img: "../../../img/baoyang.png",
-            text: "保养"
-        },
-        {
-            img: "../../../img/tiemo.png",
-            text: "贴膜"
-        },
-        {
-            img: "../../../img/dujin.png",
-            text: "镀晶"
-        },
-        {
-            img: "../../../img/weiz.png",
-            text: "查违章"
-        }],
-        shoppList: [{
-            img: "../../../img/10.png",
-            desc: "米其林防爆轮胎防炸、仿扎、仿漏气、仿火烧、结实耐用萨克就打开拉萨阿斯达卡省的撒大苏打",
-            price: "889.99",
-            evaluate: "40"
-        }, {
-            img: "../../../img/5.png",
-            desc: "米其林防爆轮胎防炸、仿扎、仿漏气、仿火烧、结实耐用萨克就打开拉萨阿斯达卡省的撒大苏打",
-            price: "1889.99",
-            evaluate: "450"
-        }, {
-            img: "../../../img/11.png",
-            desc: "米其林防爆轮胎防炸、仿扎、仿漏气、仿火烧、结实耐用萨克就打开拉萨阿斯达卡省的撒大苏打",
-            price: "188.99",
-            evaluate: "5"
-        }, {
-            img: "../../../img/10.png",
-            desc: "米其林防爆轮胎防炸、仿扎、仿漏气、仿火烧、结实耐用萨克就打开拉萨阿斯达卡省的撒大苏打",
-            price: "1889.99",
-            evaluate: "4500"
-        }],
-        shopList: [{
-            img: "../../../img/6.png",
-            name: "朝阳区百子湾店",
-            value: "3",
-            distance: "300m"
-        },
-        {
-            img: "../../../img/6.png",
-            name: "改锥车行",
-            value: "4",
-            distance: "600m"
-        },
-        {
-            img: "../../../img/6.png",
-            name: "钳子汽修",
-            value: "5",
-            distance: "5Km"
-        },]
-    },
-    //选择城市
-    goCity: function () {
-        wx.navigateTo({
-            url: '/pages/index/city/city'
-        })
-    },
-    //商品详情
-    itemDetail: function () {
-        wx.navigateTo({
-            url: '/pages/index/shoppDetail/index'
-        })
-    },
-    //搜索页面
-    goSearchPage: function () {
-        wx.navigateTo({
-            url: '/pages/index/search/index'
-        })
-    },
-    //添加车型
-    goCarType:function(){
-        wx.navigateTo({
-            url: '/pages/index/addCarType/addCarType'
-        })
-    },
-    //拨打客服电话
-    callPhone: function () {
-        wx.showModal({
-            title: '拨打电话',
-            content: '400-000-1230',
-            success(res) {
-                if (res.confirm) {
-                    wx.makePhoneCall({
-                        phoneNumber: '400-000-1230'
-                    })
-                } else if (res.cancel) {
-                    console.log('用户点击取消')
-                }
-            }
-        })
-    },
-    //预览图片，放大预览
-    // preview(event) {
-    //     let currentUrl = event.currentTarget.dataset.src;
-    //     console.log(currentUrl)
-    //     wx.previewImage({
-    //         current: currentUrl, // 当前显示图片的http链接
-    //         urls: this.data.swiperList // 需要预览的图片http链接列表
-    //     })
-    // },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function (options) {
-        wx.stopPullDownRefresh() 
-    },
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    //轮播图数组
+    imgUrls: [],
+    //活动数组
+    Services:[],
+    indicatorDots: true, //小点，根据图的数量自动增加小点
+    autoplay: true, //是否自动轮播
+    interval: 3000, //间隔时间
+    duration: 1000, //滑动时间
+  },
 
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-        var that = this;
+ //首页type
+ indexType: function () {
+   var that= this;
+  wx.request({
+      url: "http://localhost:8081/AoyoGroupFeaturedServicesController/findAllAoyoGroupFeaturedServices",
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res){
+        console.log(res.data.data)
         that.setData({
-            city: "北京市" //当前页的一些初始数据，视业务需求而定
+          Services:res.data.data
         })
-        this.onLoad();
-    },
+      }
+  })
+},
 
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
+//首页type功能
+getTypePage(e) {
+  var id = e.currentTarget.dataset.id;
+  var path = e.currentTarget.dataset.path;
+  console.log(id)
+  console.log(path)
+  if (id == 5) {
+      wx.navigateTo({
+          url: path
+      })
+  }
+  if (id == 4) {
+      wx.navigateTo({
+          url: path
+      })
+  }
+  if (id == 3) {
+      wx.navigateTo({
+          url: path
 
-    },
+      })
+  }
+  if (id == 2) {
+      wx.navigateTo({
+          url: path
+      })
+  }
+  if (id == 1) {
+      wx.navigateTo({
+          url: path
+      })
+  }
+},
 
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
+  //轮播图片
+  text: function() {
+    var that = this;//这部必须有，非常重要
+    wx.request( {//从后端获取数据
+      url: 'http://localhost:8081/AoyoCustomController/findAoyoCustomURL',//后端传数据的路径
+      data: {},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
+        console.log(res.data);
+        that.setData({
+          imgUrls:res.data.data
+      })//这里的imgUrls和<wxml>的imgUrls是同一个变量，就是将从后端获取到的数据赋值给imgUrls，传到前面使用
+        wx.hideLoading();//隐藏加载
+      }
+    })
+  },
 
-    }
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
+    this.text();
+    this.indexType()
+  }
 })

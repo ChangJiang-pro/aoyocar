@@ -1,12 +1,28 @@
-// pages/my/evaluate/evaluate.js
+// pages/my/userlist/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    focus: false,
+    inputValue: '',
+    navBarHeight: app.globalData.navBarHeight,
+    menuRight: app.globalData.menuRight,
+    menuBotton: app.globalData.menuBotton,
+    menuHeight: app.globalData.menuHeight,
   },
-
+  backmy:function(){
+    wx.navigateTo({
+      url: '/pages/my/index/index'
+  })
+  },
+  backHome:function(){
+    wx.navigateBack({
+      delta: 1
+  })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
