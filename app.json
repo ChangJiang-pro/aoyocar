@@ -1,9 +1,7 @@
 {
     "pages": [
         "pages/index/index/index",
-        "pages/classify/goods/index",
         "pages/my/index/index",
-        "pages/my/userlist/index",
         "pages/shop/index/index",
         "pages/index/city/city",
         "pages/classify/index/index",
@@ -12,6 +10,7 @@
         "pages/index/addCarType/addCarType",
         "pages/index/displacement/displacement",
         "pages/index/proYear/proYear",
+        "pages/my/login/login",
         "pages/index/carType/carType",
         "pages/shop/shopDetail/shopDetail",
         "pages/index/search/index",
@@ -24,8 +23,7 @@
         "pages/my/evaluate/evaluate",
         "pages/shopping/payment/payment",
         "pages/my/logistics/logistics",
-        "pages/my/serviceLog/serviceLog",
-        "pages/my/login/login"
+        "pages/my/serviceLog/serviceLog"
     ],
     "window": {
         "backgroundTextStyle": "light",

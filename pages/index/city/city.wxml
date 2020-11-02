@@ -1,15 +1,2 @@
-<view>
-	<!-- 自定义导航栏 start -->
-	<view class="nav-bar" style="height:{{navBarHeight}}px;">
-		<view class="back" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{{menuHeight}}px;  bottom:{{menuBotton}}px;" bindtap="backMyOne">
-			<view class="backBu">
-				<view class="back-content">
-					<view style="width:100%;height:100%" bindtap="backHome" >
-						<van-icon size="20" name="arrow-left" />
-					</view>
-				</view>
-				<view style="width:120rpx"></view>
-			</view>
-		</view>
-	</view>
-</view>
+<!--pages/index/city/city.wxml-->
+<text>pages/index/city/city.wxml</text>
