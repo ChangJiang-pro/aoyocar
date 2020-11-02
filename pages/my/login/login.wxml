@@ -13,7 +13,7 @@
 			</view>
 		</view>
 	</view>
-	<image class="login" src="../../../img/login.png"></image>
+	<image class="login" src="https://wscdevil.oss-cn-beijing.aliyuncs.com/devil/image/login.jpg"></image>
 	<!-- 自定义导航栏 end -->
 	<view class="content" style="margin-top:{{navBarHeight}}px;">
 		<view class="welcome">
